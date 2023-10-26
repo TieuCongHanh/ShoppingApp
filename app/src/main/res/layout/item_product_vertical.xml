@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="15dp"
-    android:elevation="2dp"
-    android:orientation="vertical"
-    android:id="@+id/item_product"
-    android:background="@color/white">
-    <ImageView
-        android:id="@+id/image_imgproduct"
-        android:layout_width="match_parent"
-        android:layout_height="256dp"
-        android:src="@drawable/shoppingbag" />
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/item_product"
+android:orientation="vertical"
+android:padding="8dp"
+android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/tv_productname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="hello"
-        android:gravity="center"
-        android:padding="5dp"
-        android:textSize="18sp"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:textColor="@color/blue_bold" />
+<ImageView
+    android:id="@+id/image_product"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:scaleType="centerCrop"
+    android:padding="8dp"
+    android:background="@android:color/darker_gray"/>
+
+<TextView
+    android:id="@+id/text_product_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textSize="12sp"
+    android:paddingTop="4dp"
+    android:textColor="@android:color/black"/>
+
+<TextView
+    android:id="@+id/text_product_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textSize="14sp"
+    android:textColor="#FF0000"
+    android:paddingTop="4dp"/>
 </LinearLayout>

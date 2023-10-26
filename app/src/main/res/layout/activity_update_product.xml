@@ -14,6 +14,9 @@
         android:textStyle="bold"
         android:gravity="center"
         android:background="@color/teal_700"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +78,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/age"
+            app:startIconDrawable="@drawable/money"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Price Product"
@@ -96,7 +99,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/boxes"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Type Product"
@@ -117,7 +120,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/boxes"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Quantity Product"
@@ -138,7 +141,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/description"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Description Product"
@@ -170,5 +173,5 @@
 
         </LinearLayout>
     </LinearLayout>
-
+    </ScrollView>
 </LinearLayout>

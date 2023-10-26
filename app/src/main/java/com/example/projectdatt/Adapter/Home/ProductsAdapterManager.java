@@ -73,6 +73,7 @@ public class ProductsAdapterManager extends RecyclerView.Adapter<ProductsAdapter
         }
         Picasso.get().load(products.getImage()).placeholder(R.drawable.shoppingbag).error(R.drawable.shoppingbag).into(holder.image_imgproduct);
         holder.tv_productname.setText(products.getProduct_name());
+        holder.tv_productprice.setText(products.getPrice()+" VND");
         holder.item_product.setOnClickListener(view -> {
             // Tạo Intent để chuyển sang ProductDetailActivity
             Intent intent = new Intent(context, DetailProduct.class);
@@ -132,15 +133,16 @@ public class ProductsAdapterManager extends RecyclerView.Adapter<ProductsAdapter
 
     public class ProductVerticalViewHolder extends RecyclerView.ViewHolder {
         ImageView image_imgproduct, deletePr, editPr;
-        TextView tv_productname;
+        TextView tv_productname,tv_productprice;
         LinearLayout item_product;
 
         public ProductVerticalViewHolder(@NonNull View itemView) {
             super(itemView);
-            image_imgproduct = itemView.findViewById(R.id.image_imgproduct);
+            image_imgproduct = itemView.findViewById(R.id.image_product);
             deletePr = itemView.findViewById(R.id.delete_Product);
             editPr = itemView.findViewById(R.id.edit_Product);
-            tv_productname = itemView.findViewById(R.id.tv_productname);
+            tv_productname = itemView.findViewById(R.id.text_product_name);
+            tv_productprice=itemView.findViewById(R.id.text_product_price);
             item_product = itemView.findViewById(R.id.item_product);
         }
     }

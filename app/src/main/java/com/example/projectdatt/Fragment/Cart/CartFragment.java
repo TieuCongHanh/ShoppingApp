@@ -12,6 +12,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,6 +24,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -33,6 +35,7 @@ import com.example.projectdatt.Adapter.Cart.CartAdapter;
 import com.example.projectdatt.Adapter.Home.HomeAdapter;
 import com.example.projectdatt.ChooseDiscountActivity;
 import com.example.projectdatt.FirebaseDAO.FirebaseDao;
+import com.example.projectdatt.Fragment.Home.HomeFragment;
 import com.example.projectdatt.LoginActivity;
 import com.example.projectdatt.Model.Bill;
 import com.example.projectdatt.Model.ProductsAddCart;
@@ -84,6 +87,7 @@ public class CartFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         GetView(view);
         user = SaveUserLogin.getAccount(getContext());
         tv_total.setText("Tổng số tiền: " + TotalBill() + " VND");
