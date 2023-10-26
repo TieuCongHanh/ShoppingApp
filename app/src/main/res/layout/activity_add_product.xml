@@ -13,7 +13,7 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"
-        android:background="@color/teal_700"/>
+        android:background="@color/blue"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/age"
+            app:startIconDrawable="@drawable/money"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Price Product"
@@ -96,7 +96,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/boxes"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Type Product"
@@ -117,7 +117,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/boxes"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Quantity Product"
@@ -138,7 +138,7 @@
             app:boxBackgroundColor="#ffff"
             app:startIconTintMode="screen"
             app:startIconTint="@color/cardview_shadow_end_color"
-            app:startIconDrawable="@drawable/species"
+            app:startIconDrawable="@drawable/description"
             app:hintEnabled="true">
             <com.google.android.material.textfield.TextInputEditText
                 android:hint="Description Product"
@@ -157,6 +157,7 @@
                 android:id="@+id/btn_addProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#FF5722"
                 android:text="Add Product"
                 android:fontFamily="@font/solway_bold"
                 />
