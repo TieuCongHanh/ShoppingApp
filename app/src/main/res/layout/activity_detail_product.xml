@@ -7,33 +7,6 @@
     android:background="@drawable/bg_bottom"
     android:orientation="vertical"
     tools:context=".DetailProduct">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/blue">
-
-        <!-- Nút Back -->
-        <ImageButton
-            android:id="@+id/img_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:src="@drawable/ic_back"
-            android:background="?android:attr/selectableItemBackground" />
-
-        <!-- Tiêu đề "Thông tin sản phẩm" -->
-        <TextView
-            android:layout_width="0dp"
-            android:padding="16dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Thông tin sản phẩm"
-            android:textSize="24sp"
-            android:gravity="center_vertical"
-            android:textStyle="bold" />
-    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -68,7 +41,7 @@
                         android:id="@+id/tv_nameproduct"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
                         android:gravity="start"
                         android:textSize="20dp" />
                     <TextView

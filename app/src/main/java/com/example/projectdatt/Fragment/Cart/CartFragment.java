@@ -12,7 +12,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +23,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -35,7 +33,6 @@ import com.example.projectdatt.Adapter.Cart.CartAdapter;
 import com.example.projectdatt.Adapter.Home.HomeAdapter;
 import com.example.projectdatt.ChooseDiscountActivity;
 import com.example.projectdatt.FirebaseDAO.FirebaseDao;
-import com.example.projectdatt.Fragment.Home.HomeFragment;
 import com.example.projectdatt.LoginActivity;
 import com.example.projectdatt.Model.Bill;
 import com.example.projectdatt.Model.ProductsAddCart;
@@ -44,6 +41,7 @@ import com.example.projectdatt.R;
 import com.example.projectdatt.SharedPreferences.SaveUserLogin;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -87,7 +85,6 @@ public class CartFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         GetView(view);
         user = SaveUserLogin.getAccount(getContext());
         tv_total.setText("Tổng số tiền: " + TotalBill() + " VND");
@@ -159,6 +156,13 @@ public class CartFragment extends Fragment {
         btn_confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Lấy ngày tháng hiện tại
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH) + 1; // Tháng bắt đầu từ 0 nên cộng thêm 1
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+                String currentDate = day + "-" + month + "-" + year;
                 String username = edt_username.getText().toString();
                 String phone = edt_phone.getText().toString();
                 String location = edt_location.getText().toString();
@@ -168,7 +172,7 @@ public class CartFragment extends Fragment {
                     tv_total.setText("Tổng số tiền: 0 VND");
                     List<ProductsAddCart> addCartList = new ArrayList<>();
                     cartAdapter.setDataProductsCart(addCartList);
-                    FirebaseDao.Pay(user.getId(), username, phone, location, paymentmethod, FirebaseDao.addCartList, total, getContext());
+                    FirebaseDao.Pay(user.getId(), username, phone, location, paymentmethod, FirebaseDao.addCartList, total,currentDate, getContext());
                     dialog.dismiss();
                 }
             }

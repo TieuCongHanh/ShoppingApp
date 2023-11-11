@@ -48,7 +48,7 @@ public class ProductaAdapter extends RecyclerView.Adapter<ProductaAdapter.Produc
             return;
         }
         Picasso.get().load(products.getImage()).placeholder(R.drawable.shoppingbag).error(R.drawable.shoppingbag).into(holder.image_imgproduct);
-        holder.tv_productname.setText(products.getProduct_name());
+        holder.tv_productname.setText(products.getProduct_name()+"vô danh ");
         holder.item_product.setOnClickListener(view -> {
             // ShowDialogAddToCart(products);
             // Tạo Intent để chuyển sang ProductDetailActivity

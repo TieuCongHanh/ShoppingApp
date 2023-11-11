@@ -47,10 +47,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductVertica
         this.productsList = productsList;
         notifyDataSetChanged();
     }
-    public void setfilterliss(List<Products> fiteliss) {
-        this.productsList = fiteliss;
-        notifyDataSetChanged();
-    }
 
     @NonNull
     @Override
@@ -67,7 +63,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductVertica
         }
         Picasso.get().load(products.getImage()).placeholder(R.drawable.shoppingbag).error(R.drawable.shoppingbag).into(holder.image_imgproduct);
         holder.tv_productname.setText(products.getProduct_name());
-        holder.tv_productprice.setText(products.getPrice()+" VND");
         holder.item_product.setOnClickListener(view -> {
             // ShowDialogAddToCart(products);
 // Tạo Intent để chuyển sang ProductDetailActivity
@@ -93,14 +88,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductVertica
 
     public class ProductVerticalViewHolder extends RecyclerView.ViewHolder {
         ImageView image_imgproduct;
-        TextView tv_productname,tv_productprice;
+        TextView tv_productname;
         LinearLayout item_product;
 
         public ProductVerticalViewHolder(@NonNull View itemView) {
             super(itemView);
-            image_imgproduct = itemView.findViewById(R.id.image_product);
-            tv_productname = itemView.findViewById(R.id.text_product_name);
-            tv_productprice=itemView.findViewById(R.id.text_product_price);
+            image_imgproduct = itemView.findViewById(R.id.image_imgproduct);
+            tv_productname = itemView.findViewById(R.id.tv_productname);
             item_product = itemView.findViewById(R.id.item_product);
         }
     }

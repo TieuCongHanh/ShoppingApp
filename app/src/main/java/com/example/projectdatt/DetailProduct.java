@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -52,7 +51,6 @@ public class DetailProduct extends AppCompatActivity {
         ImageButton img_btn_add = findViewById(R.id.img_btn_add);
         TextView tv_description = findViewById(R.id.tv_description);
         TextView tv_price = findViewById(R.id.tv_price);
-        ImageButton imgback=findViewById(R.id.img_back);
         Button btn_addcart = findViewById(R.id.btn_addcart);
 
         Picasso.get().load(productImage).placeholder(R.drawable.shoppingbag).error(R.drawable.shoppingbag).into(img_product);
@@ -62,12 +60,6 @@ public class DetailProduct extends AppCompatActivity {
         tv_price.setText(productPrice + " VND");
         tv_num.setText(numSelect + "");
 
-        imgback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
         img_btn_minus.setOnClickListener(view -> {
             if (numSelect > 0) {
                 numSelect--;
