@@ -5,11 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <!-- Nút Back -->
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/baseline_support_agent_24"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <!-- Tiêu đề "Thông tin sản phẩm" -->
+        <TextView
+            android:layout_width="0dp"
+            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hỗ trợ trục tuyến"
+            android:textSize="24sp"
+            android:gravity="center_vertical"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycler_view"
+        android:layout_below="@+id/top"
         android:layout_above="@id/bottom_layout"
         />
 
