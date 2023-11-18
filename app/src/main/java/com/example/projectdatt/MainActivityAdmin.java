@@ -34,9 +34,7 @@ public class MainActivityAdmin extends AppCompatActivity {
                     case R.id.bottom_doanhthu:
                         replaceFragment(RevenueFragment.newInstance());
                         return true;
-                    case R.id.bottom_sanpham:
-                        replaceFragment(ProductFragment.newInstance());
-                        return true;
+
                     case R.id.bottom_donhang:
                         replaceFragment(OrderFragment.newInstance());
                         return true;

@@ -1,27 +1,21 @@
 package com.example.projectdatt.Adapter.Home;
 
-import static com.example.projectdatt.FirebaseDAO.FirebaseDao.UpdateListProducts;
-import static com.example.projectdatt.FirebaseDAO.FirebaseDao.db;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,15 +25,9 @@ import com.example.projectdatt.FirebaseDAO.FirebaseDao;
 import com.example.projectdatt.Model.Products;
 import com.example.projectdatt.R;
 import com.example.projectdatt.SharedPreferences.SaveUserLogin;
-import com.example.projectdatt.UpdateProductActivity;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DatabaseReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProductsAdapterManager extends RecyclerView.Adapter<ProductsAdapterManager.ProductVerticalViewHolder> {
     private Context context;
@@ -106,19 +94,10 @@ public class ProductsAdapterManager extends RecyclerView.Adapter<ProductsAdapter
                     Products productToEdit = productsList.get(position);
 
                     // Create an Intent to start UpdateProductActivity
-                    Intent intent = new Intent(context, UpdateProductActivity.class);
+
 
                     // Pass the data you want to edit to UpdateProductActivity
-                    intent.putExtra("productId", productToEdit.getId());
-                    intent.putExtra("productName", productToEdit.getProduct_name());
-                    intent.putExtra("productPrice", String.valueOf(productToEdit.getPrice()));
-                    intent.putExtra("productType", productToEdit.getType_product());
-                    intent.putExtra("productQuantity", String.valueOf(productToEdit.getQuantity()));
-                    intent.putExtra("productDescription", productToEdit.getDescription());
-                    intent.putExtra("productImage", productToEdit.getImage());
 
-                    // Start UpdateProductActivity
-                    context.startActivity(intent);
                 }
             }
         });
