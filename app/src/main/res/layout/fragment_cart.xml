@@ -5,12 +5,39 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.Cart.CartFragment"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/blue">
+
+        <!-- Nút Back -->
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/baseline_shopping_cart_24"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <!-- Tiêu đề "Thông tin sản phẩm" -->
+        <TextView
+            android:layout_width="0dp"
+            android:padding="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Giỏ hàng của bạn"
+            android:textSize="24sp"
+            android:gravity="center_vertical"
+            android:textStyle="bold" />
+    </LinearLayout>
     <Button
         android:id="@+id/btn_pay"
         android:text="Thanh toán"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue"
+        android:background="#FF5722"
         android:textColor="@color/white"
         android:elevation="3dp"
         android:textSize="16dp"/>
