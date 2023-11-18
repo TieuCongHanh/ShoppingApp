@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DetailProduct extends AppCompatActivity {
+    // chi tiết sản phẩm
     Products products;
     Context context;
     int numSelect;

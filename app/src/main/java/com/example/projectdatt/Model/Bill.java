@@ -3,6 +3,7 @@ package com.example.projectdatt.Model;
 import java.util.List;
 
 public class Bill {
+    // lịch sử
     private String id;
     private String id_user;
     private String username;

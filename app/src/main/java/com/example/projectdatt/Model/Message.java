@@ -1,6 +1,7 @@
 package com.example.projectdatt.Model;
 
 public class Message {
+    // model chat bot
     public static String SENT_BY_ME = "me";
     public static String SENT_BY_BOT="bot";
 

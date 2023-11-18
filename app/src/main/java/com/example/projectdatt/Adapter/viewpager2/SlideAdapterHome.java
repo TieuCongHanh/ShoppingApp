@@ -18,6 +18,7 @@ import com.example.projectdatt.R;
 import java.util.List;
 
 public class SlideAdapterHome extends PagerAdapter {
+    //
     private Context context;
     private List<Photo> photoList;
 

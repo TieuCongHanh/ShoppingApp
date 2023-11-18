@@ -30,7 +30,7 @@ import java.util.List;
 public class UsersFragment extends Fragment {
     RecyclerView recycler_listusers;
     ManageUsersAdapter manageUsersAdapter;
-
+//
     public UsersFragment() {
         // Required empty public constructor
     }

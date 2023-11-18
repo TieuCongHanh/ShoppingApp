@@ -8,6 +8,7 @@ import com.google.firebase.firestore.auth.User;
 import com.google.gson.Gson;
 
 public class SaveUserLogin {
+    // lưu thông tin người dùng đăng nhập
     private static final String MY_SHARED_PREFS = "MySharedPrefs";
     private static final String MY_ACCOUNT = "myAccount";
     public static void saveAccount(Context context, Users user){

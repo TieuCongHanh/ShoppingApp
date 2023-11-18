@@ -34,7 +34,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     private Context context;
     private List<ProductsAddCart> productsList;
     TextView tv_totalbill;
-
+//
     public CartAdapter(Context context,TextView tv_totalbill) {
         this.context = context;
         this.tv_totalbill = tv_totalbill;

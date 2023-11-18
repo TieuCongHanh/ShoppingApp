@@ -39,6 +39,7 @@ import java.util.TimerTask;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    //
     private ViewPager vpr;
     private List<Photo> photoList;
     private Timer timer;

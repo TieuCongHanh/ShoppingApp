@@ -71,7 +71,7 @@ public class CartFragment extends Fragment {
         CartFragment fragment = new CartFragment();
         return fragment;
     }
-
+//
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

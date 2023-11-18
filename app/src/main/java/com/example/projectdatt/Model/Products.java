@@ -1,6 +1,7 @@
 package com.example.projectdatt.Model;
 
 public class Products {
+    // model sản phẩm
     private String id;
     private String product_name;
     private String image;

@@ -44,6 +44,7 @@ import com.squareup.picasso.Picasso;
  * create an instance of this fragment.
  */
 public class ProfileFragment extends Fragment {
+    // 
     TextView tv_update, tv_name_profile, tv_phone, tv_username;
     LinearLayout linear_logout, linear_changepass,linear_history;
     ImageView img_user;

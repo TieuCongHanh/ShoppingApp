@@ -32,7 +32,7 @@ import java.util.List;
 public class ManageUsersAdapter extends RecyclerView.Adapter<ManageUsersAdapter.ManageUsersViewHolder>{
     private Context context;
     private List<Users> usersList;
-
+// user
     public ManageUsersAdapter(Context context) {
         this.context = context;
     }

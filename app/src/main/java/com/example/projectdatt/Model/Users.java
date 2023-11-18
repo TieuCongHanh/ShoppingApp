@@ -1,6 +1,7 @@
 package com.example.projectdatt.Model;
 
 public class Users {
+    // model user
     private String id;
     private String name;
     private String pass;

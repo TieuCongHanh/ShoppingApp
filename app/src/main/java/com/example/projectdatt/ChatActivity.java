@@ -32,6 +32,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class ChatActivity extends AppCompatActivity {
+    // chat bot
     RecyclerView recyclerView;
     EditText messageEditText;
     ImageButton sendButton;

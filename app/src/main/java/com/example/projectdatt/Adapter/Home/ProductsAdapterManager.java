@@ -45,7 +45,7 @@ public class ProductsAdapterManager extends RecyclerView.Adapter<ProductsAdapter
     private Context context;
     private List<Products> productsList;
     int numSelect;
-
+//
     public ProductsAdapterManager(Context context) {
         this.context = context;
     }

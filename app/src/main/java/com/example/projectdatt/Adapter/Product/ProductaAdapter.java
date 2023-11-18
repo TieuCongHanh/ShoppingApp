@@ -24,7 +24,7 @@ public class ProductaAdapter extends RecyclerView.Adapter<ProductaAdapter.Produc
     private Context context;
     private List<Products> productsList;
     int numSelect;
-
+ // sản phẩm
     public ProductaAdapter(Context context) {
         this.context = context;
     }

@@ -27,6 +27,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
+   // lịch sử
     private Context context;
     private List<Bill> billList;
 

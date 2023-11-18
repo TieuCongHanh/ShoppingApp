@@ -366,6 +366,8 @@ public class FirebaseDao {
         });
     }
 
+    // ------------- about bill
+
     public static void ReadHistory(final StatusGetHistoryBill callback, Context context) {
         DatabaseReference myRef = db.getReference().child("Bill");
         myRef.addValueEventListener(new ValueEventListener() {

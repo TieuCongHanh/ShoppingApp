@@ -38,7 +38,7 @@ public class HistoryFragment extends Fragment {
     public HistoryFragment() {
     }
 
-
+//
     public static HistoryFragment newInstance() {
         HistoryFragment fragment = new HistoryFragment();
         return fragment;

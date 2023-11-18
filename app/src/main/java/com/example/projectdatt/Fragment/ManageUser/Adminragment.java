@@ -33,7 +33,7 @@ public class Adminragment extends Fragment {
     public Adminragment() {
         // Required empty public constructor
     }
-
+//
     public static Adminragment newInstance() {
         Adminragment fragment = new Adminragment();
         return fragment;

@@ -6,6 +6,7 @@ import com.google.firebase.database.DatabaseError;
 import java.util.List;
 
 public interface StatusGetProducts {
+    // prodct
     void onSuccess(List<Products> listProducts);
     void onError(DatabaseError error);
 }

@@ -25,7 +25,7 @@ public class SuccessfulFragment extends Fragment {
     public SuccessfulFragment() {
         // Required empty public constructor
     }
-
+//
     public static SuccessfulFragment newInstance() {
         SuccessfulFragment fragment = new SuccessfulFragment();
         return fragment;

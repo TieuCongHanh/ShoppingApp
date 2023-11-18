@@ -24,7 +24,7 @@ public class ManageUserFragment extends Fragment {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     TabLayoutManageUsersAdapter tabLayoutManageUsersAdapter;
-
+//
     public ManageUserFragment() {
         // Required empty public constructor
     }

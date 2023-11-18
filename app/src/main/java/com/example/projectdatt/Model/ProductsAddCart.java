@@ -1,6 +1,7 @@
 package com.example.projectdatt.Model;
 
 public class ProductsAddCart {
+    // model thanh toán
     private String id;
     private String id_user;
     private String id_product;

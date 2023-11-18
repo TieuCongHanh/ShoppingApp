@@ -7,6 +7,7 @@ import com.google.firebase.database.DatabaseError;
 import java.util.List;
 
 public interface StatusGetHistoryBill {
+    // bill
     void onSuccess(List<Bill> listBills);
     void onError(DatabaseError error);
 }

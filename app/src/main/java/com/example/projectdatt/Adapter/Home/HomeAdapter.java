@@ -38,7 +38,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ProductVertica
     private Context context;
     private List<Products> productsList;
     int numSelect;
-
+//
     public HomeAdapter(Context context) {
         this.context = context;
     }

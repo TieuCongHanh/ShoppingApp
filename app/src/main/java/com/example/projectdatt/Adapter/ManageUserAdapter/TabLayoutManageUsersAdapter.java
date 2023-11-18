@@ -12,7 +12,7 @@ public class TabLayoutManageUsersAdapter extends FragmentStateAdapter {
     public TabLayoutManageUsersAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
-
+//
     @NonNull
     @Override
     public Fragment createFragment(int position) {
