@@ -1,14 +1,12 @@
-package com.example.projectdatt.Adapter.Profile.History;
+package com.example.projectdatt.Adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,21 +14,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.projectdatt.Adapter.Cart.CartAdapter;
+import com.example.projectdatt.Adapter.Profile.History.CancelSucessfulFragment;
 import com.example.projectdatt.FirebaseDAO.FirebaseDao;
-import com.example.projectdatt.LoginActivity;
 import com.example.projectdatt.Model.Bill;
 import com.example.projectdatt.Model.ProductsAddCart;
 import com.example.projectdatt.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder> {
+public class BillAdapter extends RecyclerView.Adapter<BillAdapter.HistoryViewHolder> {
     private Context context;
     private List<Bill> billList;
 
-    public HistoryAdapter(Context context) {
+    public BillAdapter(Context context) {
         this.context = context;
     }
 
@@ -43,7 +39,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     @NonNull
     @Override
     public HistoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_history, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_orderact, parent, false);
         return new HistoryViewHolder(view);
     }
 
@@ -79,7 +75,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
                     public void onClick(DialogInterface dialog, int which) {
                         FirebaseDao.SetBillCancel(bill.getId(), "Đã hủy", context);
                         FragmentManager fragmentManager = ((AppCompatActivity) view.getContext()).getSupportFragmentManager();
-                        fragmentManager.beginTransaction().replace(R.id.layout_content, CancelSucessfulFragment.newInstance()).addToBackStack(null).commit();
+                        fragmentManager.beginTransaction().replace(R.id.layout_content_admin, CancelSucessfulFragment.newInstance()).addToBackStack(null).commit();
                     }
                 });
                 builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
